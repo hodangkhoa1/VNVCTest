@@ -141,7 +141,7 @@ namespace VNVC_Client
                 switch (indexOption)
                 {
                     case 0:
-                        urlAPI = "https://localhost:7227/get-all-lottery-results";
+                        urlAPI = "https://dienmaysaigonxanh.com:442/get-all-lottery-results";
                         jsonString = await client.GetStringAsync(urlAPI);
                         ResponseLotteryResultsData responseLotteryResultsData = JsonConvert.DeserializeObject<ResponseLotteryResultsData>(jsonString);
                         dataGridView1.DataSource = responseLotteryResultsData.Data;
@@ -153,7 +153,7 @@ namespace VNVC_Client
 
                         if (!string.IsNullOrEmpty(getAccountID))
                         {
-                            urlAPI = "https://localhost:7227/get-all-user-lottery?ID=" + getAccountID;
+                            urlAPI = "https://dienmaysaigonxanh.com:442/get-all-user-lottery?ID=" + getAccountID;
                             jsonString = await client.GetStringAsync(urlAPI);
                             ResponseUserLotteryData responseUserLotteryData = JsonConvert.DeserializeObject<ResponseUserLotteryData>(jsonString);
                             dataGridView1.DataSource = responseUserLotteryData.Data;

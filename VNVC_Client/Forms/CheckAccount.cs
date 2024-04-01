@@ -65,7 +65,7 @@ namespace VNVC_Client.Forms
                         PhoneNumber = txtName.Text,
                     };
                     HttpClient client = new();
-                    var urlAPI = "https://localhost:7227/get-account";
+                    var urlAPI = "https://dienmaysaigonxanh.com:442/get-account";
                     StringContent stringContent = new(JsonConvert.SerializeObject(checkAccountPhoneNumber), Encoding.UTF8, "application/json");
                     var jsonString = await client.PostAsync(urlAPI, stringContent);
 

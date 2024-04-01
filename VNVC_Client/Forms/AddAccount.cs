@@ -129,7 +129,7 @@ namespace VNVC_Client.Forms
                         Address = txtAddress.Text,
                     };
                     HttpClient client = new();
-                    var urlAPI = "https://localhost:7227/add-account";
+                    var urlAPI = "https://dienmaysaigonxanh.com:442/add-account";
                     StringContent stringContent = new(JsonConvert.SerializeObject(accountRequest), Encoding.UTF8, "application/json");
                     var jsonString = await client.PostAsync(urlAPI, stringContent);
 
@@ -141,7 +141,7 @@ namespace VNVC_Client.Forms
                         {
                             PhoneNumber = txtPhoneNumber.Text,
                         };
-                        urlAPI = "https://localhost:7227/get-account";
+                        urlAPI = "https://dienmaysaigonxanh.com:442/get-account";
                         stringContent = new(JsonConvert.SerializeObject(checkAccountPhoneNumber), Encoding.UTF8, "application/json");
                         jsonString = await client.PostAsync(urlAPI, stringContent);
                         AccountInformationResultsData accountInformationResultsData = JsonConvert.DeserializeObject<AccountInformationResultsData>(await jsonString.Content.ReadAsStringAsync());

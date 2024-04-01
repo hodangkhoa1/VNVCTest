@@ -63,7 +63,7 @@ namespace VNVC_Client.Forms
                         Slot = dtpSlot.Value
                     };
                     HttpClient client = new();
-                    var urlAPI = "https://localhost:7227/add-user-lottery";
+                    var urlAPI = "https://dienmaysaigonxanh.com:442/add-user-lottery";
                     StringContent stringContent = new(JsonConvert.SerializeObject(userLotteryRequest), Encoding.UTF8, "application/json");
                     var jsonString = await client.PostAsync(urlAPI, stringContent);
 
